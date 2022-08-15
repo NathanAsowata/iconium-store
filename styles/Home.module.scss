@@ -1,0 +1,35 @@
+$dark-color: #5D0000;
+
+.heroSection{
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+    button{
+        padding: 10px;
+        font-size: 18px;
+        color: white;
+        background-color: $dark-color;
+        border: none;
+        border-radius: 50px;
+        box-shadow: 2px 2px 5px $dark-color;
+        cursor: pointer;
+    }
+}
+
+// FOr larger screens
+@media screen and (min-width: 600px) {
+    .heroSection{
+        display: grid;
+        grid-template-columns: 600px 600px;
+        margin-top: 50px;
+        text-align: start;
+        h1{
+            font-size: 35px;
+        }
+        p{
+            font-size: 22px;
+        }
+    }
+}
