@@ -2,12 +2,35 @@
 
 import Link from 'next/link'
 import {BsCartFill} from "react-icons/bs"
+import {AiOutlineMenu} from "react-icons/ai"
+import { useState } from 'react'
 
 const Navigation = () => {
+
+    const [isClicked, setIsClicked] = useState(false)
+    const [newClass, setNewClass] =  useState("menu")
+
+    const handleResponsiveness = () => {
+        // If the navigation menu has not been displayed
+        if (isClicked === false) {
+            // Display the navigation menu
+            setNewClass("responsive")
+            // Update the state
+            setIsClicked(true)
+        }
+        // If the navigation menu has been displayed
+        if (isClicked === true) {
+            // Close the navigation menu
+            setNewClass("menu")
+            // Update the state
+            setIsClicked(false)
+        }
+    }
+
   return (
     <nav className='nav'>
         <span className='logo'>Iconium Store</span>
-        <span className='menu'>
+        <span className={newClass}>
             <Link href={"#"}>
                 <a>Electronics</a>
             </Link>
@@ -24,6 +47,7 @@ const Navigation = () => {
                 <a> <BsCartFill /> Your Cart</a>
             </Link>
         </span>
+        <AiOutlineMenu className='icon' onClick={handleResponsiveness} />
     </nav>
   )
 }

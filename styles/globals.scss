@@ -32,6 +32,7 @@ a {
 
 // Navigation styles
 .nav{
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,8 +46,36 @@ a {
   text-shadow: 1px 1px 5px $dark_color;
 }
 .menu{
+  display: none;
+}
+.icon{
+  display: block;
+  font-size: 30px;
+}
+.responsive{
+  position: absolute;
+  top: 60px;
   display: flex;
-  flex-direction: row;
-  width: 800px;
+  flex-direction: column;
   justify-content: space-evenly;
+  height: 150px;
+  width: 100%;
+  margin-left: -10px;
+  padding: 10px;
+  border: 1px solid $dark_color;
+}
+
+@media screen and (min-width: 600px) {
+  .menu{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-evenly;
+  }
+  .reponsive{
+    display: none;
+  }
+  .icon{
+    display: none;
+  }
 }
