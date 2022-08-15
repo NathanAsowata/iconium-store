@@ -4,9 +4,11 @@ import Link from 'next/link'
 import {BsCartFill} from "react-icons/bs"
 import {AiOutlineMenu} from "react-icons/ai"
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 const Navigation = () => {
 
+    const router = useRouter()
     const [isClicked, setIsClicked] = useState(false)
     const [newClass, setNewClass] =  useState("menu")
 
@@ -27,9 +29,14 @@ const Navigation = () => {
         }
     }
 
+    const goHome = () => {
+        router.push("/")
+    }
+
+
   return (
     <nav className='nav'>
-        <span className='logo'>Iconium Store</span>
+        <span className='logo' onClick={goHome}>Iconium Store</span>
         <span className={newClass}>
             <Link href={"#"}>
                 <a>Electronics</a>

@@ -38,12 +38,24 @@ a {
   justify-content: space-between;
   color: $dark_color;
   padding: 10px;
+  border-bottom: 1px solid $dark_color;
+  a::after{
+    content: '';
+    display: block;
+    width: 0px;
+    transition: 350ms ease-in width;
+  }
+  a:hover::after {
+    width: 90%;
+    height: 2px;
+    background-color: $dark_color;
+  }
 }
 .logo{
   font-family: 'Brawler', serif;
   font-size: 30px;
   font-weight: bold;
-  text-shadow: 1px 1px 5px $dark_color;
+  cursor: pointer;
 }
 .menu{
   display: none;

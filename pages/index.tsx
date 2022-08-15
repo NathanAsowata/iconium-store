@@ -11,7 +11,6 @@ const Home = () => {
          products ranging from men's clothing and women's clothing to jewelry and electronics" />
          <link rel="icon" href="/logo.ico" />
       </Head>
-      <Navigation />
     </>
   )
 }
