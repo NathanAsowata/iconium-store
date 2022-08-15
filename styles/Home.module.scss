@@ -18,7 +18,7 @@ $dark-color: #5D0000;
     }
 }
 
-// FOr larger screens
+// For larger screens
 @media screen and (min-width: 600px) {
     .heroSection{
         display: grid;
@@ -32,4 +32,10 @@ $dark-color: #5D0000;
             font-size: 22px;
         }
     }
+}
+
+.subHeading{
+    font-size: 28px;
+    text-align: center;
+    color: $dark-color;
 }

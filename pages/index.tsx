@@ -36,6 +36,7 @@ const Home = () => {
             <button onClick={goToProducts}>Our Products</button>
           </section>
       </header>
+      <h1 id="products"className={styles.subHeading}>Our Products</h1>
     </>
   )
 }
