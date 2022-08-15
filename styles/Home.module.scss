@@ -33,9 +33,16 @@ $dark-color: #5D0000;
         }
     }
 }
-
 .subHeading{
     font-size: 28px;
     text-align: center;
     color: $dark-color;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
 }

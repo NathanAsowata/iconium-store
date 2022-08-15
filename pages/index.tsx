@@ -1,9 +1,20 @@
 import Head from "next/head"
 import Image from "next/image"
 import { useRouter } from "next/router"
+import ProductItem from "../components/ProductItem"
 import styles from "../styles/Home.module.scss"
 
-const Home = () => {
+
+interface propTypes {
+  products: {
+    id: number,
+    title: string,
+    price: number,
+    image: string
+  }[]
+}
+
+const Home = ({products}: propTypes) => {
 
   const router = useRouter()
   const goToProducts = () => {
@@ -37,8 +48,25 @@ const Home = () => {
           </section>
       </header>
       <h1 id="products"className={styles.subHeading}>Our Products</h1>
+      <section className={styles.products}>
+        {products.map(product => {
+          return <ProductItem product={product} key={product.id} />
+        })}
+      </section>
     </>
   )
 }
+
+export const getServerSideProps = async () => {
+  const res = await fetch(`https://fakestoreapi.com/products`)
+  const results = await res.json()
+  
+  return {
+    props: {
+      products: results
+    }
+  }
+}
+
 
 export default Home
