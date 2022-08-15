@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Navigation from "../components/Navigation"
 
 const Home = () => {
 
@@ -10,7 +11,7 @@ const Home = () => {
          products ranging from men's clothing and women's clothing to jewelry and electronics" />
          <link rel="icon" href="/logo.ico" />
       </Head>
-      <h1>Welcome to Iconium store</h1>
+      <Navigation />
     </>
   )
 }

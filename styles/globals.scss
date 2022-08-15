@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Brawler&family=Oxygen&display=swap');
+$dark_color: #5D0000;
 
 html,
 body {
@@ -27,3 +28,25 @@ a {
   }
 }
 
+
+
+// Navigation styles
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $dark_color;
+  padding: 10px;
+}
+.logo{
+  font-family: 'Brawler', serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px $dark_color;
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  justify-content: space-evenly;
+}
