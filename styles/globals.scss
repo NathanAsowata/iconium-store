@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Brawler&family=Oxygen&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Oxygen', sans-serif;
+  background-color: #FAEBD7;
 }
 
 a {
@@ -11,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -24,3 +26,4 @@ a {
     background: black;
   }
 }
+
