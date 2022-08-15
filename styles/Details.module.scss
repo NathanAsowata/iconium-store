@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    p{
+        margin: 10px 2px;
+        padding: 0px;
+    }
+}
+.image{
+    box-shadow: 3px 3px 8px grey;
+    width: fit-content;
+    justify-self: center;
+}
+.title{
+    margin: 10px 2px;
+    padding: 0px;
+}
+.category{
+    text-transform: capitalize;
+    color: #5D0000;
+}
+.price{
+    font-weight: 400;
+    font-size: 20px;
+}
+.quantity{
+    font-weight: 600;
+}
+.list{
+    border: 1px solid #5D0000;
+}
+.button{
+    display: block;
+    padding: 10px;
+    background-color: #5D0000;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 6px #5D0000;
+    margin: 20px 1px;
+}
+@media screen and (min-width: 600px) {
+    .container{
+        display: grid;
+        grid-template-columns: 500px 1fr;
+        gap: 100px;
+        padding: 50px;
+    }
+}

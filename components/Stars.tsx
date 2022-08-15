@@ -1,4 +1,5 @@
 import {AiFillStar, AiOutlineStar} from "react-icons/ai"
+import styles from "../styles/Stars.module.scss"
 
 interface propTypes {
     rate: number
@@ -10,40 +11,40 @@ const Stars = ({rate}: propTypes) => {
   if(stars===1) {
     return( 
         <>
-            <AiFillStar /> <AiOutlineStar /> <AiOutlineStar /> <AiOutlineStar /> <AiOutlineStar />
+            <AiFillStar className={styles.star} /> <AiOutlineStar className={styles.star} /> <AiOutlineStar className={styles.star} /> <AiOutlineStar className={styles.star} /> <AiOutlineStar className={styles.star} />
         </>
     )
   }
   else if(stars===2) {
     return( 
         <>
-            <AiFillStar /> <AiFillStar /> <AiOutlineStar /> <AiOutlineStar /> <AiOutlineStar />
+            <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiOutlineStar className={styles.star} /> <AiOutlineStar className={styles.star} /> <AiOutlineStar className={styles.star} />
         </>
     )
   }
   else if(stars===3) {
     return( 
         <>
-            <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiOutlineStar /> <AiOutlineStar />
+            <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiOutlineStar className={styles.star} /> <AiOutlineStar className={styles.star} />
         </>
     )
   }
   else if(stars===4) {
     return( 
-        <>
-            <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiOutlineStar />
+        <> 
+            <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiOutlineStar className={styles.star} />
         </>
     )
   }
   else if(stars===5) {
     return( 
         <>
-            <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar />
+            <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} /> <AiFillStar className={styles.star} />
         </>
     )
   }
   else {
-    return <p> N/A </p>
+    return <p className={styles.star}> N/A </p>
   }
   
 }
