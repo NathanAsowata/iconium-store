@@ -38,19 +38,19 @@ const Navigation = () => {
     <nav className='nav'>
         <span className='logo' onClick={goHome}>Iconium Store</span>
         <span className={newClass}>
-            <Link href={"#"}>
+            <Link href={"/category/electronics"}>
                 <a>Electronics</a>
             </Link>
-            <Link href={"#"}>
+            <Link href={"/category/jewelery"}>
                 <a>Jewelery</a>
             </Link>
-            <Link href={"#"}>
-                <a>Men's Clothing</a>
+            <Link href={"/category/men's clothing"}>
+                <a>Men&#39;s Clothing</a>
             </Link>
-            <Link href={"#"}>
-                <a>Women's Clothing</a>
+            <Link href={"/category/women's clothing"}>
+                <a>Women&#39;s Clothing</a>
             </Link>
-            <Link href={"#"}>
+            <Link href={"/cart"}>
                 <a> <BsCartFill /> Your Cart</a>
             </Link>
         </span>

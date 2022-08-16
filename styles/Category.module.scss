@@ -1,0 +1,11 @@
+.title{
+    text-transform: capitalize;
+    margin: 20px;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
