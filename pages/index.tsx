@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 import { useRouter } from "next/router"
+import Footer from "../components/Footer"
 import ProductItem from "../components/ProductItem"
 import styles from "../styles/Home.module.scss"
 
@@ -53,6 +54,7 @@ const Home = ({products}: propTypes) => {
           return <ProductItem product={product} key={product.id} />
         })}
       </section>
+      <Footer />
     </>
   )
 }
