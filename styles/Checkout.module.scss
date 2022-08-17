@@ -1,0 +1,52 @@
+.container{
+    display: grid;
+    justify-content: center;
+}
+.form{
+    margin: 10p;
+    font-size: 18px;
+    input{
+        padding: 8px;
+        border: 1px solid #5D0000;
+        margin-top: 10px;
+    }
+    fieldset{
+        border: none;
+    }
+    button{
+        padding: 10px;
+        width: 200px;
+        font-size: 18px;
+        background-color: #5D0000;
+        color: white;
+        border: none;
+        box-shadow: 2px 2px 7px #5D0000;
+        margin: 15px;
+        cursor: pointer;
+    }
+}
+.mastercard, .paypal{
+    padding: 10px;
+    width: 200px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+.mastercard{
+    background-color: #E4001A;
+    box-shadow: 2px 2px 7px #E4001A;
+}
+.paypal{
+    background-color: #24397C;
+    box-shadow: 2px 2px 7px #24397C;
+}
+
+@media screen and (min-width: 600px) {
+    .form{
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        width: 600px;
+    }
+}
