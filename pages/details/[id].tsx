@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Stars from '../../components/Stars'
 import styles from "../../styles/Details.module.scss"
+import {useDispatch} from "react-redux"
+import {addProduct} from "../../redux/productSlice"
+import { useState } from 'react'
 
 
 interface propTypes {
@@ -20,6 +23,22 @@ interface propTypes {
 }
 
 const Details = ({productDetails}: propTypes) => {
+
+  const [productQuantity, setProductQuantity] = useState(1)
+
+  const dispatch = useDispatch()
+
+  const newProduct = {
+    name: productDetails.title,
+    quantity: productQuantity,
+    price: productDetails.price
+  }
+
+  const addToCart = () => {
+    dispatch(addProduct(newProduct))
+    alert("Product added successfully")
+  }
+
   return (
     <>
     <Head>
@@ -42,14 +61,18 @@ const Details = ({productDetails}: propTypes) => {
         <p className={styles.price}>${productDetails.price}</p>
         <p className={styles.decription}>{productDetails.description}</p>
         <span className={styles.quantity}>Quantity: </span>
-        <select className={styles.list}>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
+        <select 
+          className={styles.list} 
+          value={productQuantity} 
+          onChange={(e) => setProductQuantity(parseInt(e.target.value))}
+        >
+          <option value={1}>1</option>
+          <option value={2}>2</option>
+          <option value={3}>3</option>
+          <option value={4}>4</option>
+          <option value={5}>5</option>
         </select>
-        <button className={styles.button}>Add To Cart</button>
+        <button className={styles.button} onClick={addToCart}>Add To Cart</button>
       </section>
     </div>
     </>
