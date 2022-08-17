@@ -24,6 +24,18 @@
 .productCost{
     font-weight: 600;
 }
+.checkout{
+    padding: 10px;
+    background-color: #5D0000;
+    color: white;
+    width: fit-content;
+    margin: 10px;
+    border: none;
+    font-size: 18px;
+    box-shadow: 2px 2px 7px #5D0000;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 @media screen and (min-width: 600px) {.item{
     display: flex;

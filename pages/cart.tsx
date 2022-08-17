@@ -1,6 +1,7 @@
 import type { RootState } from '../redux/store'
 import { useSelector } from 'react-redux'
 import styles from "../styles/Cart.module.scss"
+import { useRouter } from 'next/router'
 
 const Cart = () => {
 
@@ -10,8 +11,16 @@ const Cart = () => {
   // Array to calculate the total price of all products in the cart
   const totalPrice: number[] = []
   
+  // Add total price function
   const addTotalPrice = (total: number, number: number) => {
       return total + number
+  }
+
+  const router = useRouter()
+
+  // Proceed to checkout function 
+  const goToCheckout = () => {
+      router.push("/checkout")
   }
 
   // If there are no products in the cart
@@ -40,9 +49,10 @@ const Cart = () => {
           })}
 
           <div className={styles.item}>
-                <span className={styles.productName}>TOTAL</span>
-                <span className={styles.productCost}>${totalPrice.reduce(addTotalPrice)}</span>
-              </div>
+              <span className={styles.productName}>TOTAL</span>
+              <span className={styles.productCost}>${totalPrice.reduce(addTotalPrice)}</span>
+            </div>
+            <button className={styles.checkout} onClick={goToCheckout}>Proceed To Checkout</button>
         </main>
       </>
     )
