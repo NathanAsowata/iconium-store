@@ -34,7 +34,7 @@ const Cart = () => {
               <div key={index} className={styles.item}>
                 <span className={styles.productName}>{product.name}</span>
                 <span>{product.quantity} {product.quantity === 1 ? "unit" : "units"} </span>
-                <span className={styles.productCost}>${product.quantity * product.price}</span>
+                <span className={styles.productCost}>${Math.round(product.quantity * product.price)}</span>
               </div>
             )
           })}
