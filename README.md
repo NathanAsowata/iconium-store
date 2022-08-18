@@ -25,6 +25,6 @@ My goal was to  build a web app that requires state management
 * I would complete the payment integration features
 
 ## Available Scripts
-`npm run dev` - To start development server.
-`npm run start` - To start app in production mode.
-`npm run tests` - To run tests
+`npm run dev` - To start development server.  
+`npm run start` - To start app in production mode.  
+`npm run tests` - To run tests  
